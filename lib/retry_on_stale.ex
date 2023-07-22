@@ -1,7 +1,7 @@
 defmodule RetryOnStale do
-  def retry_on_stale(fun, opts \\ []) do
-    max_attempts = Keyword.get(opts, :max_attempts, 5)
-    delay_ms = Keyword.get(opts, :delay_ms, 100)
+  def retry_on_stale(fun, opts) do
+    max_attempts = Keyword.fetch!(opts, :max_attempts)
+    delay_ms = Keyword.fetch!(opts, :delay_ms)
 
     do_retry_on_stale(fun, max_attempts, delay_ms, 1)
   end

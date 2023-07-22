@@ -19,7 +19,6 @@ def increase_wallet_balance(%Wallet{} = wallet, amount) do
       # this function could raise a StaleEntryError
       do_increase_wallet_balance(wallet, amount)
     end,
-    # `max_attempts: 5` and `delay_ms: 100` are used as default values if not explicitly specified
     max_attempts: 5, delay_ms: 100
   )
 end
@@ -37,9 +36,9 @@ end
 ## Options
 
 `:max_attempts` - The maximum number of attempts to perform the operation
-before giving up and re-raising the last Ecto.StaleEntryError. Default is 5.
+before giving up and re-raising the last Ecto.StaleEntryError.
 
-`:delay_ms` - The delay in milliseconds between each attempt. Default is 100.
+`:delay_ms` - The delay in milliseconds between each attempt.
 
 
 ## Installation

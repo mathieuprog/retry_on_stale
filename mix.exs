@@ -35,9 +35,8 @@ defmodule RetryOnStale.MixProject do
       {:decimal, "~> 2.1"},
       {:ecto_sql, "~> 3.10", only: :test},
       {:postgrex, "~> 0.17", only: :test},
-      {:ex_doc, "~> 0.30", only: :dev},
-      {:inch_ex, "~> 2.0", only: :dev},
-      {:dialyxir, "~> 1.3", only: :dev}
+      {:ex_doc, "~> 0.30", only: :dev, runtime: false},
+      {:dialyxir, "~> 1.3", only: :dev, runtime: false}
     ]
   end
 

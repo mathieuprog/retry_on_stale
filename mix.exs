@@ -59,7 +59,10 @@ defmodule RetryOnStale.MixProject do
     [
       licenses: ["Apache-2.0"],
       maintainers: ["Mathieu Decaffmeyer"],
-      links: %{"GitHub" => "https://github.com/mathieuprog/retry_on_stale"}
+      links: %{
+        "GitHub" => "https://github.com/mathieuprog/retry_on_stale",
+        "Sponsor" => "https://github.com/sponsors/mathieuprog"
+      }
     ]
   end
 
